@@ -5,13 +5,18 @@ if (burger) {
 	burger.addEventListener('click', e => {
 		burger.classList.toggle('menu-open');
 		menuMobile.classList.toggle('menu-open');
+		document.body.classList.toggle('lock');
 	});
 }
 
-// langeage
+// todo: при при изменение ориентации устройства проверять какая сейчас его ширина и если оно больше 767 то убирать классы активности у меню, бургера и убрать лок у бади. При условии если кончено они есть.
+/*
+window.addEventListener('orientationchange', () => {
+	console.log(window.innerHeight);
+});
+*/
 
 headerAdaptiveMobile();
-
 window.addEventListener('resize', headerAdaptiveMobile);
 
 function headerAdaptiveMobile() {
@@ -19,7 +24,8 @@ function headerAdaptiveMobile() {
 		menuLanguage = document.querySelector('.header-top__lang'),
 		menuColumn = document.querySelectorAll('[data-header-menu]'),
 		width = window.innerWidth;
-	if (width < 768) {
+
+	if (width <= 767) {
 		menuList.forEach(menu => {
 			menuMobile.append(menu);
 		});

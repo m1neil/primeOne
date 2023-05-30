@@ -70,7 +70,7 @@
 		font-size: rem(10);
 		text-transform: uppercase;
 		text-decoration: underline;
-		padding: rem(2) rem(5);
+		padding: rem(4);
 		background-color: transparent;
 		transition: background-color 0.3s ease 0s;
 		&:not(:last-child) {
@@ -129,7 +129,7 @@
 		}
 		@media (max-width: $mobile) {
 			&:not(:first-child) {
-				margin-top: rem(10);
+				margin-top: rem(15);
 			}
 		}
 	}
@@ -148,7 +148,7 @@
 	&__item {
 		@media (max-width: $mobile) {
 			&:not(:last-child) {
-				margin-bottom: rem(10);
+				margin-bottom: rem(15);
 			}
 		}
 	}
@@ -184,7 +184,7 @@
 		}
 
 		@media (max-width: $mobile) {
-			font-size: rem(20);
+			font-size: rem(23);
 		}
 	}
 	// .header-bottom__logo

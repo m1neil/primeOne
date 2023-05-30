@@ -1,9 +1,222 @@
 //====================================================================================================
+.header {
+	padding: rem(31) 0;
+	// .header__container
+	&__container {
+	}
+	// .header__top
+	&__top {
+		margin-bottom: rem(20);
+	}
+	// .header__bottom
+	&__bottom {
+	}
+
+	// .header__menu-mobile
+	&__menu-mobile {
+		display: none;
+		@media (max-width: $mobile) {
+			display: block;
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: -100%;
+			background-color: gray;
+			transition: all 0.3s ease 0s;
+			padding: rem(125) rem(15) rem(30);
+			overflow: auto;
+			&::after {
+				content: "";
+				position: fixed;
+				width: 100%;
+				height: rem(110);
+				top: 0;
+				left: -100%;
+				background-color: gray;
+				transition: all 0.3s ease 0s;
+			}
+			&.menu-open {
+				left: 0;
+				&::after {
+					content: "";
+					left: 0;
+				}
+				// background-color: gray;
+			}
+		}
+	}
+}
+.header-top {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	column-gap: rem(20);
+	// .header-top__icon
+	&__icon {
+	}
+	// .header-top__lang
+	&__lang {
+		display: inline-flex;
+		margin-right: rem(25);
+		@media (max-width: $mobile) {
+			margin-top: rem(20);
+		}
+	}
+	// .header-top__item
+	&__item {
+		color: inherit;
+		font-family: "Bebas";
+		font-size: rem(10);
+		text-transform: uppercase;
+		text-decoration: underline;
+		padding: rem(2) rem(5);
+		background-color: transparent;
+		transition: background-color 0.3s ease 0s;
+		&:not(:last-child) {
+			margin-right: rem(5);
+		}
+		&.active {
+			color: #fff;
+			text-decoration: none;
+			background-color: $mainColor;
+		}
+
+		@media (max-width: $mobile) {
+			font-size: rem(16);
+		}
+	}
+	// .header-top__link
+	&__link {
+		position: relative;
+		z-index: 1;
+		color: inherit;
+		font-family: "akzidenz";
+		font-size: rem(15);
+		text-transform: uppercase;
+		text-decoration: underline;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		@media (max-width: $mobile) {
+			font-size: rem(12);
+		}
+	}
+}
+
+.header-bottom {
+	@media (min-width: $mobile) {
+		display: flex;
+		align-items: center;
+		column-gap: rem(20);
+	}
+	margin-top: rem(-33);
+
+	// .header-bottom__column
+	&__column {
+		flex: 0 0 calc(33.333% - rem(13));
+	}
+
+	// .header-bottom__menu
+	&__menu {
+		&_fbjc-right {
+			@media (min-width: $mobile) {
+				display: flex;
+				justify-content: flex-end;
+			}
+		}
+		@media (max-width: $mobile) {
+			&:not(:first-child) {
+				margin-top: rem(10);
+			}
+		}
+	}
+	// .header-bottom__list
+	&__list {
+		@media (min-width: $mobile) {
+			display: flex;
+			column-gap: rem(47);
+		}
+
+		@media (max-width: $tablet) {
+			column-gap: rem(25);
+		}
+	}
+	// .header-bottom__item
+	&__item {
+		@media (max-width: $mobile) {
+			&:not(:last-child) {
+				margin-bottom: rem(10);
+			}
+		}
+	}
+	// .header-bottom__link
+	&__link {
+		/* Style for "ABOUT" */
+		color: inherit;
+		white-space: nowrap;
+		font-family: "akzidenz";
+		font-size: rem(15);
+		text-transform: uppercase;
+		letter-spacing: rem(1.5);
+		position: relative;
+		padding-bottom: rem(1);
+		&::after {
+			content: "";
+			position: absolute;
+			border-radius: rem(10);
+			width: 0;
+			height: rem(1.5);
+			bottom: 0;
+			left: 50%;
+			background-color: $mainColor;
+			transition: all 0.3s ease 0s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				&::after {
+					width: 100%;
+					left: 0;
+				}
+			}
+		}
+
+		@media (max-width: $mobile) {
+			font-size: rem(20);
+		}
+	}
+	// .header-bottom__logo
+	&__logo {
+		position: relative;
+		z-index: 5;
+		display: block;
+		max-width: rem(212);
+		margin: 0 auto;
+		text-align: center;
+		img {
+			max-width: 100%;
+		}
+		@media (max-width: $mobile) {
+			max-width: rem(100);
+		}
+	}
+	// .header-bottom__text
+	&__text {
+		color: inherit;
+		font-family: "Bebas";
+		font-size: rem(8);
+		text-transform: uppercase;
+		letter-spacing: rem(8);
+		letter-spacing: rem(2.72);
+	}
+}
 
 //====================================================================================================
 
 //Burger
-/*
+
 .icon-menu {
 	display: none;
 	@media (max-width: $mobile) {
@@ -33,22 +246,18 @@
 		span {
 			top: calc(50% - rem(1));
 		}
-		.menu-open & {
+		&.menu-open {
 			span {
-				width: 0;
-			}
-			&::before,
-			&::after {
+				transform: scale(0);
 			}
 			&::before {
 				top: calc(50% - rem(1));
-				transform: rotate(-45deg);
+				transform: rotate(45deg);
 			}
 			&::after {
 				bottom: calc(50% - rem(1));
-				transform: rotate(45deg);
+				transform: rotate(-45deg);
 			}
 		}
 	}
 }
-*/

@@ -1,3 +1,53 @@
-//====================================================================================================
+// .private
+
+.private {
+	background-color: $mainColor;
+	// .private__container
+	&__container {
+		@media (min-width: $mobile) {
+			display: flex;
+		}
+	}
+	// .private__column
+	&__column {
+		flex: 0 1 50%;
+	}
+	// .private__img
+	&__img {
+		position: relative;
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			object-fit: cover;
+		}
+	}
+	// .private__body
+	&__body {
+		padding: rem(82) rem(60) rem(75);
+	}
+
+	// .private__content
+	&__content {
+		max-width: rem(305);
+	}
+	// .private__title
+	&__title {
+	}
+	// .private__text
+	&__text {
+	}
+	// .private__links
+	&__links {
+	}
+	// .private__btn
+	&__btn {
+	}
+	// .private__link
+	&__link {
+	}
+}
 
 //====================================================================================================

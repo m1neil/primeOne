@@ -1,4 +1,4 @@
-// Burger menu ====================================================================================================
+// Burger menu
 
 const burger = document.querySelector('.icon-menu'),
 	menuMobile = document.querySelector('.header__menu-mobile');
@@ -11,7 +11,16 @@ if (burger) {
 	});
 }
 
-// Adaptive header ====================================================================================================
+window.addEventListener('orientationchange', () => {
+	if (burger.classList.contains('menu-open')) {
+		burger.classList.remove('menu-open');
+		menuMobile.classList.remove('menu-open');
+		document.body.classList.remove('lock');
+	}
+});
+//====================================================================================================
+
+// Adaptive header
 
 headerAdaptiveMobile();
 window.addEventListener('resize', headerAdaptiveMobile);
@@ -39,3 +48,4 @@ function headerAdaptiveMobile() {
 		document.querySelector('.header__top').prepend(menuLanguage);
 	}
 }
+//====================================================================================================

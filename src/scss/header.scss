@@ -1,15 +1,23 @@
 //====================================================================================================
 .header {
 	padding: rem(31) 0;
+
 	// .header__container
 	&__container {
 	}
 	// .header__top
 	&__top {
 		margin-bottom: rem(20);
+		@media (max-width: $mobile) {
+			margin-bottom: 0;
+		}
 	}
 	// .header__bottom
 	&__bottom {
+		margin-top: rem(-33);
+		@media (max-width: $mobile) {
+			margin-top: rem(-40);
+		}
 	}
 
 	// .header__menu-mobile
@@ -22,7 +30,7 @@
 			height: 100%;
 			top: 0;
 			left: -100%;
-			background-color: gray;
+			background-color: #fff;
 			transition: all 0.3s ease 0s;
 			padding: rem(125) rem(15) rem(30);
 			overflow: auto;
@@ -33,7 +41,7 @@
 				height: rem(110);
 				top: 0;
 				left: -100%;
-				background-color: gray;
+				background-color: #fff;
 				transition: all 0.3s ease 0s;
 			}
 			&.menu-open {
@@ -52,6 +60,7 @@
 	align-items: center;
 	justify-content: space-between;
 	column-gap: rem(20);
+
 	// .header-top__icon
 	&__icon {
 	}
@@ -67,14 +76,14 @@
 	&__item {
 		color: inherit;
 		font-family: "Bebas";
-		font-size: rem(10);
+		font-size: rem(13);
 		text-transform: uppercase;
 		text-decoration: underline;
-		padding: rem(4);
+		padding: rem(2) rem(4);
 		background-color: transparent;
 		transition: background-color 0.3s ease 0s;
 		&:not(:last-child) {
-			margin-right: rem(5);
+			margin-right: rem(12);
 		}
 		&.active {
 			color: #fff;
@@ -112,7 +121,6 @@
 		align-items: center;
 		column-gap: rem(20);
 	}
-	margin-top: rem(-33);
 
 	// .header-bottom__column
 	&__column {
@@ -206,10 +214,10 @@
 	&__text {
 		color: inherit;
 		font-family: "Bebas";
-		font-size: rem(8);
+		font-size: rem(10);
 		text-transform: uppercase;
 		letter-spacing: rem(8);
-		letter-spacing: rem(2.72);
+		letter-spacing: rem(8);
 	}
 }
 

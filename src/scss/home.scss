@@ -37,12 +37,12 @@
 	}
 	// .private__body
 	&__body {
-		padding: rem(78) rem(30) rem(75) rem(60);
+		padding: rem(78) rem(15) rem(75) rem(60);
 		@media (max-width: $tablet) {
-			padding: rem(45);
+			padding: rem(45) rem(15) rem(45) rem(45);
 		}
 		@media (max-width: $mobile) {
-			padding: rem(30) rem(25);
+			padding: rem(30) rem(15);
 		}
 	}
 

@@ -4,14 +4,13 @@
 .btn {
 	color: #ffffff;
 	font-family: "Bebas";
-	font-size: rem(15);
+	font-size: rem(19);
 	text-transform: uppercase;
 	letter-spacing: rem(1.5);
 	text-align: center;
 	display: inline-block;
-	padding: rem(18.5) rem(34) rem(16.5);
+	padding: rem(16) rem(34);
 	background-color: $mainColor;
-
 	&_white {
 		background-color: #fff;
 		color: inherit;

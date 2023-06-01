@@ -1,6 +1,4 @@
-// Заголовки, общие БЄМ блоки и проче...
 @import "./base/elements/button";
-@import "./base/elements/link";
 
 // .title
 .title {
@@ -10,21 +8,48 @@
 	line-height: math.div(25, 25);
 	text-transform: uppercase;
 	letter-spacing: rem(2.5);
+
 	// .title_white
 	&_white {
 		color: #ffffff;
 		font-size: 50px;
 		letter-spacing: rem(5);
+		@media (max-width: $tablet) {
+			font-size: rem(45);
+		}
+
+		@media (max-width: $mobile) {
+			font-size: rem(35);
+		}
 	}
 }
 
-//====================================================================================================
-
 // .text
 .text {
-	color: #9d9d9d;
+	color: #fff;
 	font-size: rem(15);
 	line-height: math.div(25, 15);
+}
+
+// .link
+.link {
+	color: inherit;
+	font-family: "Bebas";
+	font-size: rem(19);
+	text-decoration: underline;
+	text-transform: uppercase;
+	letter-spacing: rem(1.5);
+
+	@media (any-hover: hover) {
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	&_white {
+		color: #fffffe;
+		letter-spacing: rem(2.5);
+	}
 }
 
 //====================================================================================================

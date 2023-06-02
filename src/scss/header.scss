@@ -1,7 +1,9 @@
 //====================================================================================================
 .header {
 	padding: rem(31) 0;
-
+	@media (max-width: $mobile) {
+		padding: rem(31) 0 rem(10);
+	}
 	// .header__container
 	&__container {
 	}
@@ -34,6 +36,7 @@
 			transition: all 0.3s ease 0s;
 			padding: rem(125) rem(15) rem(30);
 			overflow: auto;
+			z-index: 1;
 			&::after {
 				content: "";
 				position: fixed;
@@ -98,7 +101,7 @@
 	// .header-top__link
 	&__link {
 		position: relative;
-		z-index: 1;
+		z-index: 5;
 		color: inherit;
 		font-family: "akzidenz";
 		font-size: rem(15);

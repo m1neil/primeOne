@@ -1,5 +1,4 @@
 // .private
-
 .private {
 	background-color: $mainColor;
 	// .private__container
@@ -85,6 +84,113 @@
 	}
 	// .private__link
 	&__link {
+	}
+}
+
+//====================================================================================================
+
+// .products
+.products {
+	padding: rem(75) 0;
+	@media (max-width: $tablet) {
+		padding: rem(45) 0;
+	}
+	@media (max-width: $mobile) {
+		padding: rem(25) 0;
+	}
+	// .products__container
+	&__container {
+		@media (min-width: $mobileSmall) {
+			display: flex;
+			flex-wrap: wrap;
+			row-gap: rem(35);
+		}
+	}
+	// .products__item
+	&__item {
+		flex: 0 1 25%;
+		@media (max-width: em(849.98)) {
+			flex: 0 1 50%;
+		}
+		@media (min-width: $mobileSmall) {
+			display: flex;
+			flex-direction: column;
+		}
+		@media (max-width: $mobileSmall) {
+			&:not(:last-child) {
+				margin-bottom: rem(25);
+			}
+		}
+	}
+	// .products__img
+	&__img {
+		display: block;
+		padding-bottom: 103.6%;
+		margin-bottom: rem(22);
+		overflow: hidden;
+		img {
+			transition: all 1s ease 0s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				img {
+					filter: grayscale(1);
+				}
+			}
+		}
+	}
+	&__body {
+		display: flex;
+		flex-direction: column;
+		@media (min-width: $mobileSmall) {
+			flex: 1 1 auto;
+			padding-left: rem(5);
+			padding-right: rem(25);
+		}
+	}
+	// .products__title
+	&__title {
+		display: block;
+		margin-bottom: rem(26);
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #be420e;
+			}
+		}
+		@media (min-width: $mobileSmall) {
+			overflow: hidden;
+			max-width: rem(121);
+			flex: 0 0 rem(50);
+		}
+		@media (max-width: $mobileSmall) {
+			margin-bottom: rem(15);
+		}
+	}
+	// .products__desr
+	&__text {
+		&:not(:last-child) {
+			margin-bottom: rem(28);
+			@media (max-width: $mobileSmall) {
+				margin-bottom: rem(15);
+			}
+		}
+		flex: 1 1 100%;
+	}
+
+	// .products__btn
+	&__btn {
+		align-self: flex-start;
+		&:not(:last-child) {
+			margin-bottom: rem(25);
+			@media (max-width: $mobileSmall) {
+				margin-bottom: rem(18);
+			}
+		}
+	}
+	// .products__link
+	&__link {
+		align-self: flex-start;
 	}
 }
 

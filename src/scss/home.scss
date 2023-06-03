@@ -195,6 +195,7 @@
 	&__advantages {
 	}
 }
+
 .head-why-us {
 	background-color: #000;
 	@media (min-width: $mobile) {
@@ -293,3 +294,90 @@
 	&__text {
 	}
 }
+//====================================================================================================
+
+// .contacts
+
+.contacts {
+	padding: rem(82) rem(0) 0;
+	// .contacts__container
+	&__container {
+	}
+	// .contacts__body
+
+	// .contacts__title
+	&__title {
+		margin-bottom: rem(27);
+	}
+	// .contacts__items
+	&__items {
+		display: flex;
+		justify-content: space-between;
+		gap: rem(23) rem(10);
+		flex-wrap: wrap;
+	}
+	// .contacts__item
+	&__item {
+		flex: 0 1 calc(50% - rem(5));
+		display: flex;
+		align-items: center;
+		column-gap: rem(10);
+		&_social {
+			display: flex;
+			align-items: center;
+			column-gap: rem(31);
+		}
+	}
+	// .contacts__icon
+	&__icon {
+	}
+	// .contacts__text
+	&__text {
+		font-style: normal;
+		line-height: math.div(18, 15);
+	}
+}
+
+.communicate-contacts {
+	display: flex;
+	margin-top: rem(24);
+	background-color: #000;
+	@media (max-width: $mobile) {
+		flex-direction: column-reverse;
+	}
+	// .communicate-contacts__column
+	&__column {
+		flex: 0 1 50%;
+		@media (max-width: $mobile) {
+			iframe {
+				height: rem(200);
+			}
+		}
+	}
+	// .communicate-contacts__body
+	&__body {
+		padding: rem(50) rem(15) rem(50) rem(60);
+		@media (min-width: $mobile) {
+			max-width: rem(450);
+		}
+		@media (max-width: $tablet) {
+			padding: rem(35);
+		}
+		@media (max-width: $mobile) {
+			padding: rem(35) rem(15);
+		}
+	}
+	// .communicate-contacts__title
+	&__title {
+		color: #fff;
+		margin-bottom: rem(25);
+	}
+	// .communicate-contacts__form
+	&__form {
+	}
+	// .communicate-contacts__btn
+	&__btn {
+	}
+}
+
+//====================================================================================================

@@ -1,0 +1,33 @@
+.form {
+	// .form__data
+	&__data {
+		margin-bottom: rem(25);
+	}
+	// .form__btn
+	&__btn {
+		padding: rem(13) rem(26);
+	}
+}
+
+.input {
+	display: block;
+	width: 100%;
+	height: rem(50);
+	border: rem(2) solid #959595;
+	padding: 0 rem(15);
+	background-color: #252525;
+	color: #959595;
+	&::placeholder {
+		color: #959595;
+		font-size: rem(15);
+	}
+	&:focus {
+		outline: 0;
+	}
+}
+
+textarea.input {
+	padding: rem(7) rem(15);
+	resize: none;
+	height: rem(100);
+}

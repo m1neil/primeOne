@@ -73,3 +73,22 @@ if (languageContainer && langButtons.length) {
 }
 
 //====================================================================================================
+const inputs = document.querySelectorAll('.input');
+
+if (inputs.length) {
+	inputs.forEach(input => {
+		addPlaceholder(input);
+		input.addEventListener('focus', () => {
+			input.placeholder = '';
+		});
+		input.addEventListener('blur', () => {
+			addPlaceholder(input);
+		});
+	});
+}
+
+function addPlaceholder(input) {
+	if (input.dataset.value) {
+		input.placeholder = input.dataset.value;
+	}
+}

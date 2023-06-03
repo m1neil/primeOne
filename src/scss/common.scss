@@ -1,5 +1,5 @@
 @import "./base/elements/button";
-
+@import "./base/form";
 // .title
 .title {
 	color: inherit;
@@ -10,7 +10,8 @@
 	letter-spacing: rem(2.5);
 
 	// .title_white
-	&_white {
+	&_white,
+	&_black {
 		color: #ffffff;
 		font-size: 50px;
 		letter-spacing: rem(5);
@@ -21,6 +22,10 @@
 		@media (max-width: $mobile) {
 			font-size: rem(35);
 		}
+	}
+
+	&_black {
+		color: inherit;
 	}
 }
 

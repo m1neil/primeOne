@@ -1,3 +1,42 @@
 //====================================================================================================
+.footer {
+	padding: rem(34) rem(0) rem(27);
+	@media (max-width: $mobile) {
+		padding: rem(15) 0;
+	}
+	// .footer__container
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		column-gap: rem(25);
+		@media (max-width: em(575.98)) {
+			flex-direction: column-reverse;
+			row-gap: rem(10);
+		}
+	}
+	// .footer__copy
+	&__copy {
+		color: #4d4d4d;
+		font-size: rem(15);
+		line-height: math.div(20, 15);
+		a {
+			text-decoration: underline;
+		}
+		@media (max-width: em(575.98)) {
+			text-align: center;
+		}
+	}
+	// .footer__logo
+	&__logo {
+		@media (min-width: em(575.98)) {
+			flex: 0 0 rem(156);
+		}
+		max-width: rem(156);
+		img {
+			max-width: 100%;
+		}
+	}
+}
 
 //====================================================================================================

@@ -3,9 +3,6 @@
 	background-color: $mainColor;
 	// .private__container
 	&__row {
-		// @media (min-width: $mobile) {
-		// 	display: flex;
-		// }
 		display: flex;
 		@media (max-width: $mobile) {
 			flex-direction: column-reverse;
@@ -78,12 +75,6 @@
 		align-items: center;
 		flex-wrap: wrap;
 		gap: rem(14);
-	}
-	// .private__btn
-	&__btn {
-	}
-	// .private__link
-	&__link {
 	}
 }
 
@@ -177,7 +168,6 @@
 		}
 		flex: 1 1 100%;
 	}
-
 	// .products__btn
 	&__btn {
 		align-self: flex-start;
@@ -195,3 +185,111 @@
 }
 
 //====================================================================================================
+
+// .why-us
+.why-us {
+	// .why-us__head
+	&__head {
+	}
+	// .why-us__advantages
+	&__advantages {
+	}
+}
+.head-why-us {
+	background-color: #000;
+	@media (min-width: $mobile) {
+		display: flex;
+	}
+	// .head-why-us__column
+	&__column {
+		flex: 0 1 50%;
+	}
+	// .head-why-us__title
+	&__title {
+		text-align: right;
+		padding: rem(50) rem(55) rem(50);
+		@media (max-width: $tablet) {
+			padding: rem(30) rem(20) rem(30);
+			font-size: rem(35);
+		}
+		@media (max-width: $mobile) {
+			padding: rem(25) 0;
+			text-align: center;
+			font-size: rem(27);
+		}
+	}
+	// .head-why-us__img
+	&__img {
+		height: 100%;
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+}
+
+.advantages-why-us {
+	background-color: #ebebeb;
+	padding: rem(50) 0;
+	@media (max-width: $tablet) {
+		padding: rem(35) 0;
+	}
+	@media (max-width: $mobile) {
+		padding: rem(25) 0;
+	}
+	// .advantages-why-us__container
+	&__container {
+		@media (min-width: $mobile) {
+			display: flex;
+			gap: rem(46) rem(10);
+			flex-wrap: wrap;
+		}
+	}
+	// .advantages-why-us__item
+	&__item {
+		flex: 0 1 calc(50% - rem(5));
+		column-gap: rem(13);
+		display: flex;
+		align-items: flex-start;
+		@media (max-width: $mobile) {
+			&:not(:last-child) {
+				margin-bottom: rem(25);
+			}
+		}
+	}
+	// .advantages-why-us__img
+	&__img {
+		flex: 0 0 rem(100);
+		display: flex;
+		background-color: #000;
+		justify-content: center;
+		align-items: center;
+		height: rem(100);
+		@media (max-width: $mobileSmall) {
+			flex: 0 0 rem(80);
+			height: rem(80);
+		}
+		img {
+			max-width: 100%;
+		}
+	}
+	// .advantages-why-us__body
+	&__body {
+		flex: 1 1 auto;
+	}
+	// .advantages-why-us__title
+	&__title {
+		@media (min-width: $mobile) {
+			height: rem(50);
+			overflow: hidden;
+		}
+		&:not(:last-child) {
+			// margin-bottom: rem(10);
+			@media (max-width: $mobile) {
+				margin-bottom: rem(10);
+			}
+		}
+	}
+	// .advantages-why-us__text
+	&__text {
+	}
+}

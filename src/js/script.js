@@ -73,6 +73,8 @@ if (languageContainer && langButtons.length) {
 }
 
 //====================================================================================================
+
+// placeholder for input
 const inputs = document.querySelectorAll('.input');
 
 if (inputs.length) {
@@ -92,3 +94,32 @@ function addPlaceholder(input) {
 		input.placeholder = input.dataset.value;
 	}
 }
+
+//====================================================================================================
+
+// goto links
+const linksGoto = document.querySelectorAll('[data-goto]');
+
+if (linksGoto.length) {
+	linksGoto.forEach(link => {
+		link.addEventListener('click', e => {
+			if (e.target) {
+				e.preventDefault();
+			}
+
+			const target = e.target;
+
+			if (target.dataset.goto && document.querySelector(target.dataset.goto)) {
+				const block = document.querySelector(target.dataset.goto),
+					distance = block.getBoundingClientRect().top + scrollY;
+
+				window.scrollTo({
+					top: distance,
+					behavior: 'smooth',
+				});
+			}
+		});
+	});
+}
+
+//====================================================================================================
